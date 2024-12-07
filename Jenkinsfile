@@ -1,6 +1,6 @@
     pipeline {
         tools {
-            maven 'm3'
+            maven 'm398'
             jdk 'jdk11'
         }
        
