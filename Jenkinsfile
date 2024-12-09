@@ -31,7 +31,7 @@
             stage('Code Quality Check') {
                 steps {
                     withSonarQubeEnv('sonar'){
-                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=atinsingh_cidemo'
+                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=akhanal77_cicd'
                        // some block
                     }
                 }
