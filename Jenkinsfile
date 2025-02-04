@@ -67,13 +67,13 @@
                  )
                  }
              }
-   //          stage('Promote Build') {
-   //              steps {
-   //                  withCredentials([usernameColonPassword(credentialsId: 'artificatory', variable: 'logindata')]) {
-   //                   sh 'curl -u${logindata} -X PUT "http://localhost:8081/artifactory/api/storage/libs-snapshot-local/pragra-ci-demo/${BUILD_NUMBER}/ci-pipeline-pragra-0.0.1.jar?properties=Promoted=Yes"'
-   //               }
-   //            }
-   //         }
+             stage('Promote Build') {
+                 steps {
+                     withCredentials([usernameColonPassword(credentialsId: 'artificatory', variable: 'logindata')]) {
+                      sh 'curl -u${logindata} -X PUT "http://localhost:8081/artifactory/api/storage/libs-snapshot-local/pragra-ci-demo/${BUILD_NUMBER}/ci-pipeline-pragra-0.0.1.jar?properties=Promoted=Yes"'
+                 }
+               }
+            }
              stage('Publish to Artifactory') {
                  steps {
                      rtMavenResolver (
